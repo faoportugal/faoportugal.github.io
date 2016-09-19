@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{% for post in site.posts limit:1 %}
 <center class="wrapper">
   <div class="webkit">
     <!--[if (gte mso 9)|(IE)]>
@@ -12,7 +11,7 @@ layout: default
     <table class="outer" align="center">
       <tr>
         <td class="pre-header">
-          <p>Newsletter FAO {{ post.title }} | <a href="{{site.url}}{{post.url}}">Ver esta Newsletter no browser</a></p>
+          <p>Newsletter FAO {{ page.title }} | <a href="{{site.url}}{{page.url}}">Ver esta Newsletter no browser</a></p>
         </td>
       </tr>
 
@@ -21,8 +20,8 @@ layout: default
         <td class="header">
           <p class="h1"><a href="http://www.fao.org/portugal/"><img src="http://www.fao.org/fileadmin/templates/faoweb/images/FAO-logo-w.png" alt="Logo Fao" width ="320"></a></h1>
             <p class="h2">Escritório da FAO em Portugal e junto da CPLP</h2>
-              <p class="h3">{{ post.title }}</h3>
-                <p class="number">Newsletter nº {{ post.number }}</p>
+              <p class="h3">{{ page.title }}</h3>
+                <p class="number">Newsletter nº {{ page.number }}</p>
               </td>
             </tr>
 
@@ -30,17 +29,17 @@ layout: default
             <tr>
               <td class="section highlight">
                 <p class="titleSection" id="destaque">DESTAQUE</p>
-                <p class="h1"><a href="{{ post.destaque.url }}">{{ post.destaque.title }}</a></p>
-                <p class="date">{{ post.destaque.date }}</p>
+                <p class="h1"><a href="{{ page.destaque.url }}">{{ page.destaque.title }}</a></p>
+                <p class="date">{{ page.destaque.date }}</p>
                 <center>
                   <div class="figure">
-                    <img src="{{ post.destaque.img.src }}" alt="Fotografia de Artigo" width="456">
-                    <p class="figcaption">{{ post.destaque.img.caption }}</p>
+                    <img src="{{ page.destaque.img.src }}" alt="Fotografia de Artigo" width="456">
+                    <p class="figcaption">{{ page.destaque.img.caption }}</p>
                   </div>
                 </center>
-                <p class="text">{{ post.destaque.text }}</p>
+                <p class="text">{{ page.destaque.text }}</p>
                 <center>
-                  <a href="{{ post.destaque.url }}" style="color: #FFFFFF; display: block; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; text-transform: uppercase; font-family:Arial, Helvetica, sans-serif;">
+                  <a href="{{ page.destaque.url }}" style="color: #FFFFFF; display: block; font-size: 16px; font-weight: bold; text-align: center; text-decoration: none; text-transform: uppercase; font-family:Arial, Helvetica, sans-serif;">
                     <table border="0" cellpadding="10" cellspacing="0" width="150" align="center">
                       <tr>
                         <td class="btn" align="center" style="background: #0d6cac; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; border-bottom: 2px solid #063758 !important;" valign="top">
@@ -57,7 +56,7 @@ layout: default
             <tr>
               <td class="section">
                 <p class="titleSection" id="noticias">NOTÍCIAS</p>
-                {% for noticias in post.noticias %}
+                {% for noticias in page.noticias %}
                 <table class="news">
                   <tr class="news-header">
                     <td>
@@ -103,7 +102,7 @@ layout: default
               <tr>
                 <td class="section" id="mais">
                   <p class="titleSection">MAIS NOTÍCIAS</p>
-                  {% for outras in post.outras %}
+                  {% for outras in page.outras %}
                   <table class="otherNews">
                     <tr>
                       <td>
@@ -126,7 +125,7 @@ layout: default
               <tr>
                 <td class="section editorial">
                   <p class="titleSection" id="editorial">EDITORIAL</p>
-                  {% for editorial in post.editorial %}
+                  {% for editorial in page.editorial %}
                   <p class="text">{{ editorial.p}}</p>
                   {% endfor %}
                   <center>
@@ -152,7 +151,7 @@ layout: default
                 <td class="section agenda">
                   <p class="titleSection" id="agenda">AGENDA</p>
                   <dl>
-                    {% for events in post.events %}
+                    {% for events in page.events %}
                     <dt>{{ events.date }}</dt>
                     <dd><a href="{{ events.url }}">{{ events.title }}</a></dd>
                     {% endfor %}
@@ -222,4 +221,3 @@ layout: default
         <![endif]-->
       </div>
     </center>
-{% endfor %}

@@ -1,0 +1,264 @@
+//  EMAIL RESET
+body {
+    Margin: 0 !important;
+    padding: 0;
+    background-color: #ffffff;
+}
+table {
+    border-spacing: 0;
+    font-family: sans-serif;
+    color: #333333;
+    font-size: 14px;
+}
+td {
+    padding: 0;
+}
+img {
+    border: 0;
+}
+div[style*="Margin: 16px 0"] {
+    Margin:0 !important;
+}
+.wrapper {
+    width: 100%;
+    table-layout: fixed;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+.webkit {
+    max-width: 600px;
+    Margin: 0 auto 15px;
+}
+p {
+  Margin:0px;
+}
+
+
+
+
+// GENERAL -----------
+.outer{
+  Margin: 0 auto;
+  width: 95%;
+  max-width: 600px;
+}
+
+.pre-header p{
+  Margin: 10px 0;
+  text-align: center;
+  font-size: 9px;
+  color: $grey;
+}
+.section{
+  padding: 15px 50px 15px;
+  border-left: 1px solid $blue;
+  border-right: 1px solid $blue;
+
+  .titleSection{
+    text-align: center;
+    text-transform: uppercase;
+    color: $grey;
+    font-size: 10px;
+    letter-spacing: 2px;
+    Margin-bottom: 10px;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:link{
+    color: $blue;
+  }
+  &:visited{
+    color: $darkblue;
+  }
+  &:hover{
+    color: $darkblue;
+  }
+  &:active{
+    color: $grey;
+  }
+}
+.date{
+  letter-spacing: 1px;
+  font-size: 10px;
+  color: $grey;
+}
+
+
+
+// HEADER ------------
+.header{
+  background: $blue;
+  border-radius: 5px 5px 0 0;
+  color: #ffffff;
+  padding: 13px 16px;
+
+  img {
+    width: 80%;
+    max-width: 320px;
+  }
+
+  .h1{
+    Margin-bottom: 12px;
+  }
+
+  .h2{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .h3{
+    Margin-top: 10px;
+    line-height: 1.2;
+    font-size: 19px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  p{
+    font-size: 12px;
+  }
+}
+
+
+
+// DESTAQUE
+.h1{
+  font-size: 18px;
+  letter-spacing: 0.5px;}
+.figure{
+  text-align: center;
+  img{
+    width: 100%;
+    height: 100%;
+    Margin-top: 10px;
+    Margin-bottom: 5px;
+  }
+  .figcaption{
+    font-size: 4px;
+    color: #ffffff;
+  }
+}
+.text{
+  line-height: 20px;
+  Margin-bottom: 10px;
+}
+.btn{
+  padding: 10px;
+  &-grey{
+    color: $blue;
+    padding: 10px;
+  }
+  p{
+    color: #ffffff;
+  }
+}
+
+// NOTÍCIAS
+.news{
+  text-align: center;
+  .h1, .date{
+    text-align: left;
+  }
+}
+.news-text, .news-image{
+  text-align: left;
+  width: 90%;
+  max-width: 350px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mrButton{
+  padding-bottom: 40px;
+}
+
+.otherNews{
+  padding-bottom: 22px;
+}
+
+.imgContainer{
+  width: 33%;
+}
+
+
+// EDITORIAL
+.editorial{
+  text-align: center;
+  background: #eeeeee;
+  color: $darkblue;
+  .text{
+    text-align: left;
+  }
+}
+.icon{
+  padding-bottom: 15px;
+  color: $darkblue;
+  td{
+    text-align: center;
+  }
+  .texto{
+    padding-top: 8px;
+  }
+  .nome{
+    font-weight: bold;
+  }
+  .description{
+    font-size: 12px;
+  }
+}
+
+
+// AGENDA
+.agenda{
+  background: #dddddd;
+  text-align: center;
+  .titleSection{
+    color: $darkblue;
+  }
+  dl{
+    Margin-bottom: 0;
+  }
+  dt{
+    color: #757575;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  dd{
+    Margin-left: 0;
+    Margin-bottom: 14px;
+  }
+}
+
+
+// FOOTER
+.footer{
+  background: $blue;
+  border-radius: 0 0 5px 5px;
+  padding: 13px 16px;
+  a {
+    font-weight: bold;
+    &:link, &:visited, &:hover{
+      color: #ffffff;
+    }
+    &:active{
+      color: $grey;
+    }
+  }
+  .left td{
+    padding-bottom: 14px;
+  }
+  td{
+    color: #ffffff;
+  }
+  table{
+    width: 100%;
+  }
+  .logoContainer, .copyrightContainer{
+    text-align: right;
+  }
+  .copyright{
+    Margin-top: 52px;
+  }
+}

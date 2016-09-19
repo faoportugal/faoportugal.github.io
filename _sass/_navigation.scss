@@ -1,0 +1,109 @@
+.navBg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:-1;
+  width: 100%;
+  height: 100vh;
+  background: none;
+  transition: all .5s ease;
+}
+
+.navigation{
+  display: block;
+  width: 200px; // !
+  height: 100%;
+  position: absolute;
+  padding: 0;
+  top: 2rem;
+  left: -200px; // !
+  z-index: 2;
+  li{
+    display: block;
+    text-transform: uppercase;
+    line-height: 2;
+    font-family: 'Roboto', 'Helvetica', Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    }
+  }
+
+
+input.nav-trigger{
+  position:absolute;
+  clip: rect(0, 0, 0, 0);
+  top:0;
+  left:0;
+}
+label[for="nav-trigger"]{
+  position: fixed;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 3;
+  width: 1.5rem;
+  height:1.5rem;
+  cursor: pointer;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    width: 1.5rem;
+    height: 0.20rem;
+    background: $grey;
+    box-shadow:
+      0 0.5rem 0 0 $grey,
+      0 1rem 0 0 $grey;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    width: 1.5rem;
+    height: 0.20rem;
+    background: none;
+    box-shadow: none;
+  }
+}
+
+.nav-trigger:checked ~ label[for="nav-trigger"]{
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.60rem;
+    width: 1.5rem;
+    height: 0.20rem;
+    background: $grey;
+    box-shadow:none;
+    transform: rotate(45deg);
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.60rem;
+    width: 1.5rem;
+    height: 0.20rem;
+    background: $grey;
+    box-shadow: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.navigation {
+  transition: left 0.2s ease;
+}
+
+.nav-trigger:checked ~ .navigation {
+  left:1rem;
+}
+
+@media all and (max-width: 750px){
+  .nav-trigger:checked + .navBg {
+    z-index:1;
+    background: #fff;
+  }
+}

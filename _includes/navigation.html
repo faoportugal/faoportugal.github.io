@@ -1,0 +1,13 @@
+<nav>
+
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <div class="navBg"></div>
+  <label for="nav-trigger"></label>
+
+  <ul class="navigation">
+    {% for post in site.posts %}
+      <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
